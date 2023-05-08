@@ -41,12 +41,12 @@ service:
   port: 8888
 
 ingress:
-  enabled: false
+  enabled: true
   className: "nginx"
   annotations:
     ingress.kubernetes.io/ssl-redirect: "false"
   hosts:
-    - host: app.inception-of-things.local
+    - http:
       paths:
         - path: /
           pathType: ImplementationSpecific
